@@ -1,0 +1,72 @@
+.floating-window {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(
+    to bottom right,
+    rgba(29, 78, 216, 0.8),
+    rgba(21, 24, 31, 0.8)
+  ); /* Dark blueish gradient with transparency */
+  backdrop-filter: blur(10px); /* Adds a blurred effect behind the floating window */
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: width 0.3s, height 0.3s, bottom 0.3s, right 0.3s;
+  z-index: 99999;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border similar to your example */
+}
+
+.floating-window.open {
+  width: 95vw; /* Or any size you desire */
+  height: 95vh; /* Or any size you desire */
+}
+
+.floating-window .content {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 50%;
+  height: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.popup-content {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.map-container {
+  width: 250px;
+  height: 250px;
+}
+
+.floating-window p {
+  font-size: 14px;
+  color: #f0f0f0; /* Adjusted color for better visibility */
+  padding: 10px 0;
+}
+
+.back-button {
+  position: absolute;
+  background-color: #333;
+  width: 7px;
+  height: 10px;
+  align-items: center;
+}
+
+.predict-button {
+  background: linear-gradient(
+    to bottom right,
+    rgba(29, 78, 216, 0.8),
+    rgba(21, 24, 31, 0.8)
+  ); /* Dark blueish gradient with transparency */
+  backdrop-filter: blur(10px); /* Adds a blurred effect behind the floating window */
+}
